@@ -4,10 +4,21 @@
       %p.side-bar__top-items__user-name
         Kotaro
       %ul.side-bar__top-items__icons
-        %li
+        %li.side-bar__top-items__icons__icon
           = link_to '#' do
             = icon('fas', 'edit')
-        %li
+        %li.side-bar__top-items__icons__icon
           = link_to '#' do
             = icon('fas', 'cog')
   .side-bar__body
+    %ul.side-bar__group-list
+      %li.side-bar__group-list__items
+        %p.side-bar__group-list__items__name
+          My Group #1
+        %p.side-bar__group-list__items__top-message
+          no messages
+      %li.side-bar__group-list__items
+        %p.side-bar__group-list__items__name
+          My Group #2
+        %p.side-bar__group-list__items__top-message
+          no messages
