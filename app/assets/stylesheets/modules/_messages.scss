@@ -98,7 +98,30 @@
   &__body {
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
+    padding: 35px 40px;
   }
+  &__message-items {
+    margin-bottom: 46px;
+    &__message-header {
+      display: flex;
+      margin-bottom: 12px;
+    }
+    &__user-name {
+      margin-right: 10px;
+      color: #333333;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__date {
+      color: #999999;
+      font-size: 12px;
+    }
+    &__message {
+      color: #434a54;
+      font-size: 14px;
+    }
+  }
+
   &__form {
     height: 90px;
     background-color: #d2d2d2;
