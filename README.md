@@ -1,4 +1,4 @@
-# README ok
+# README
 
 ## usersテーブル
 |Column|Type|Option|
