@@ -14,7 +14,7 @@
           Kotaro
         .main-chat__message-items__date
           2020/2/11(Tue) 10:00:00
-      .main-chat__message-items__message
+      %p.main-chat__message-items__message
         これはテストメッセージです。
     .main-chat__message-items
       .main-chat__message-items__message-header
@@ -22,6 +22,13 @@
           Kotaro
         .main-chat__message-items__date
           2020/2/11(Tue) 10:00:00
-      .main-chat__message-items__message
+      %p.main-chat__message-items__message
         これはテストメッセージです。
   .main-chat__form
+    = form_tag '#', class: 'main-chat__form-items' do
+      .main-chat__form-items__area
+        = text_field_tag :message, '', placeholder: 'type a message', class: 'main-chat__form-items__message'
+        %label{class: "main-chat__form-items__image-icon"}
+          = icon('fas', 'image')
+          %input{type: "file"}
+      = submit_tag 'Send', class: 'main-chat__form-items__send-btn'
