@@ -2,25 +2,25 @@
   .main-chat__top
     .main-chat__group-info-items
       .main-chat__group-info-items__data
-        .main-chat__group-info-items__name
+        %h1.main-chat__group-info-items__name
           My Group #1
-        .main-chat__group-info-items__members
+        %p.main-chat__group-info-items__members
           Member: Kotaro
       = link_to 'Edit', '#', class: 'main-chat__group-info-items__edit-btn'
   .main-chat__body
     .main-chat__message-items
       .main-chat__message-items__message-header
-        .main-chat__message-items__user-name
+        %h2.main-chat__message-items__user-name
           Kotaro
-        .main-chat__message-items__date
+        %p.main-chat__message-items__date
           2020/2/11(Tue) 10:00:00
       %p.main-chat__message-items__message
         これはテストメッセージです。
     .main-chat__message-items
       .main-chat__message-items__message-header
-        .main-chat__message-items__user-name
+        %h2.main-chat__message-items__user-name
           Kotaro
-        .main-chat__message-items__date
+        %p.main-chat__message-items__date
           2020/2/11(Tue) 10:00:00
       %p.main-chat__message-items__message
         これはテストメッセージです。

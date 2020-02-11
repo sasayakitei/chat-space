@@ -4,11 +4,11 @@
       %p.side-bar__top-items__user-name
         Kotaro
       %ul.side-bar__top-items__icons
-        %li.side-bar__top-items__icons__icon
-          = link_to '#' do
+        %li.side-bar__top-items__icon
+          = link_to '#', class: 'side-bar__top-items__icon-link' do
             = icon('fas', 'edit')
-        %li.side-bar__top-items__icons__icon
-          = link_to '#' do
+        %li.side-bar__top-items__icon
+          = link_to '#', class: 'side-bar__top-items__icon-link' do
             = icon('fas', 'cog')
   .side-bar__body
     %ul.side-bar__group-list
@@ -22,4 +22,3 @@
           My Group #2
         %p.side-bar__group-list__items__top-message
           まだメッセージがありません
-          
