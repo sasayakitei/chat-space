@@ -12,13 +12,9 @@
             = icon('fas', 'cog')
   .side-bar__body
     %ul.side-bar__group-list
-      %li.side-bar__group-list__items
-        %p.side-bar__group-list__items__name
-          My Group #1
-        %p.side-bar__group-list__items__top-message
-          まだメッセージがありません
-      %li.side-bar__group-list__items
-        %p.side-bar__group-list__items__name
-          My Group #2
-        %p.side-bar__group-list__items__top-message
-          まだメッセージがありません
+      - current_user.groups.each do |group|
+        %li.side-bar__group-list__items
+          %p.side-bar__group-list__items__name
+            = group.name
+          %p.side-bar__group-list__items__top-message
+            まだコメントされていません
