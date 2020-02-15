@@ -53,7 +53,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use Haml
-gem "haml-rails"
+gem 'haml-rails'
 
 # Use FontAwesome
 gem 'font-awesome-sass'
+
+# Use devise
+gem 'devise'
