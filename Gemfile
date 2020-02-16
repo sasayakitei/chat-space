@@ -62,3 +62,7 @@ gem 'font-awesome-sass'
 
 # Use devise
 gem 'devise'
+
+# Use CarrierWave
+gem 'carrierwave'
+gem 'mini_magick'
