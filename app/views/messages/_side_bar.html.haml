@@ -14,7 +14,8 @@
     %ul.side-bar__group-list
       - current_user.groups.each do |group|
         %li.side-bar__group-list__items
-          %p.side-bar__group-list__items__name
-            = group.name
-          %p.side-bar__group-list__items__top-message
-            まだコメントされていません
+          = link_to group_messages_path(group), class: 'side-bar__group-list__link' do
+            %p.side-bar__group-list__items__name
+              = group.name
+            %p.side-bar__group-list__items__top-message
+              = group.show_last_message

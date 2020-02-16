@@ -2,33 +2,20 @@
   .main-chat__top
     .main-chat__group-info-items
       .main-chat__group-info-items__data
-        %h1.main-chat__group-info-items__name
-          My Group #1
+        %p.main-chat__group-info-items__name
+          = @group.name
         %p.main-chat__group-info-items__members
-          Member: Kotaro
-      = link_to 'Edit', '#', class: 'main-chat__group-info-items__edit-btn'
+          Member:
+          - @group.users.each do |user|
+            = user.name
+      = link_to 'Edit', edit_group_path(@group), class: 'main-chat__group-info-items__edit-btn'
   .main-chat__body
-    .main-chat__message-items
-      .main-chat__message-items__message-header
-        %h2.main-chat__message-items__user-name
-          Kotaro
-        %p.main-chat__message-items__date
-          2020/2/11(Tue) 10:00:00
-      %p.main-chat__message-items__message
-        これはテストメッセージです。
-    .main-chat__message-items
-      .main-chat__message-items__message-header
-        %h2.main-chat__message-items__user-name
-          Kotaro
-        %p.main-chat__message-items__date
-          2020/2/11(Tue) 10:00:00
-      %p.main-chat__message-items__message
-        これはテストメッセージです。
+    = render @messages
   .main-chat__form
-    = form_tag '#', class: 'main-chat__form-items' do
+    = form_for [@group, @message], html: { class: 'main-chat__form-items' } do |f|
       .main-chat__form-items__area
-        = text_field_tag :message, '', placeholder: 'type a message', class: 'main-chat__form-items__message'
-        %label{class: "main-chat__form-items__image-icon"}
+        = f.text_field :content, placeholder: 'type a message', class: 'main-chat__form-items__message'
+        = f.label :image, class: 'main-chat__form-items__image-icon' do
           = icon('fas', 'image')
-          %input{type: "file"}
-      = submit_tag 'Send', class: 'main-chat__form-items__send-btn'
+          = f.file_field :image
+      = f.submit 'Send', class: 'main-chat__form-items__send-btn'

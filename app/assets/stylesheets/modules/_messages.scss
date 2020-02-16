@@ -72,6 +72,10 @@ $button-color: #38aef0;
         font-size: 11px;
       }
     }
+    &__link {
+      color: $side-bar-font-color;
+      text-decoration: none;
+    }
   }
 }
 
