@@ -7,6 +7,8 @@ require File.expand_path('../config/environment', __dir__)
 require 'devise'
 require File.expand_path("spec/support/controller_macros.rb")
 
+repuire 'capybara/rspec'
+
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
