@@ -116,6 +116,7 @@ $button-color: #38aef0;
     height: $main-chat-body-height;
     background-color: #fafafa;
     padding: 35px 40px;
+    overflow: auto;
   }
   &__message-items {
     margin-bottom: 46px;
