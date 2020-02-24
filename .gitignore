@@ -18,3 +18,4 @@
 
 # Ignore all uploaded picture files.
 public/uploads/*
+config/secrets.yml
